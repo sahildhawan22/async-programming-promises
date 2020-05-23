@@ -1,10 +1,10 @@
 import setText from "./results.mjs";
 
 export function raceCondition() {
-  let xhr = new XMLHttpRequest();
+  let xhr = new XMLHttpRequest(); //used for making requests
   let statuses = [];
-  xhr.open("GET", "http://localhost:3000/orderStatuses");
-  xhr.onload = () => {
+  xhr.open("GET", "http://localhost:3000/orderStatuses"); 
+  xhr.onload = () => { //used for success
     statuses = JSON.parse(xhr.responseText);
   };
 
